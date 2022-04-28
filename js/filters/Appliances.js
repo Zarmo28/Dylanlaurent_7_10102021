@@ -23,7 +23,7 @@ export default class Appliances {
         return this;
     }
 
-    // display the appliances in the appliances zone according to the recipes displayed in the 'recipes' section
+    // afficher les appareils dans la zone appareils selon les recettes affichées dans la rubrique 'recettes'
     static fillAppliances(appliances) {
         let ul = document.createElement('ul');
         ul.classList.add('listUlApp');
@@ -39,7 +39,7 @@ export default class Appliances {
         });
     }
 
-    // allows to search for the appliances in the input from the appliances present in the recipes displayed
+    // permet de rechercher les appareils en entrée parmi les appareils présents dans les recettes affichées
     static searchInput(appliances) {
         document.getElementById('inputAppareil').addEventListener('keyup', (key) => {
             let valueSearch = key.target.value;

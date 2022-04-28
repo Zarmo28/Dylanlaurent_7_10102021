@@ -1,7 +1,7 @@
 'use strict';
 
 export default class DataLogic {
-    // get all the ingredients to make them appear by default, before searching
+    // obtenir tous les ingrédients pour les faire apparaître par défaut, avant de chercher
     static getAllIngredients(ing) {
         let ingredients = [];
         ing.forEach((recipe) => {
@@ -13,7 +13,7 @@ export default class DataLogic {
         return ingredients;
     }
 
-    // get all the appliances to make them appear by default, before searching
+    // obtenir tous les appareils pour les faire apparaître par défaut, avant de chercher
     static getAllAppliances(app) {
         let appliances = [];
         app.forEach((recipe) => {
@@ -23,7 +23,7 @@ export default class DataLogic {
         return appliances;
     }
 
-    // get all the ustensils to make them appear by default, before searching
+    // récupérez tous les ustensiles pour les faire apparaître par défaut, avant de chercher
     static getAllUstensils(ust) {
         let ustensils = [];
         ust.forEach((recipe) => {

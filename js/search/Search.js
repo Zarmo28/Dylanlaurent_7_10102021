@@ -20,7 +20,7 @@ export default class Search {
         };
     }
 
-    // search by input for ingredients/appliances/ustensils
+    // recherche par entrée d'ingrédients/appareils/ustensiles
     static searchInputFilters(collection, value) {
         let resultInput = [];
         collection.forEach(elt => {
@@ -32,7 +32,7 @@ export default class Search {
         return resultInput;
     }
 
-    // search by tags for ingredients
+    // recherche par tags pour les ingrédients
     static searchByIngTags(recipes, tagIng) {
         let resultIng = [];
 
@@ -45,7 +45,7 @@ export default class Search {
         return resultIng;
     }
 
-    // search by tags for appliances
+    // rechercher par balises pour les appareils
     static searchByAppTags(recipes, tagApp) {
         let resultApp = [];
 
@@ -58,7 +58,7 @@ export default class Search {
         return resultApp;
     }
 
-    // search by tags for ustensils
+    // recherche par tags pour les ustensiles
     static searchByUstTags(recipes, tagUst) {
         let resultUst = [];
 

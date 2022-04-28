@@ -13,7 +13,7 @@ export default class Badges {
     static hiddenAppareilFilter = document.querySelector('#hiddenAppareilFilter');
     static hiddenUstensilesFilter = document.querySelector('#hiddenUstensilesFilter');
 
-    // displays a badge containing the tag of the ingredient/appliance/ustensil that the user has selected
+    // affiche un badge contenant le tag de l'ingrédient/appareil/ustensile que l'utilisateur a sélectionné
     static buildTags(elt, tag) {
         this.pushDownButtonsFilter();
         this.displayTag(elt);
@@ -25,26 +25,26 @@ export default class Badges {
         return elt.style.display = 'flex';
     }
 
-    // fill in the selected tag
+    // remplir la balise sélectionnée
     static fillTag(elt, tag) {
         return elt.innerHTML = tag + ` <i class='far fa-times-circle'></i>`;
     }
 
-    // remove the tag and replace the ingredient/appliance/ustensil buttons
+    // retirez l'étiquette et replacez les boutons ingrédient/appareil/ustensile
     static hideTag(elt) {
         this.pushUpButtonsFilter();
 
         return elt.style.display = 'none';
     }
 
-    // push down the ingredient/appliance/ustensil buttons
+    // appuyer sur les boutons ingrédient/appareil/ustensile
     static pushDownButtonsFilter() {
         this.hiddenIngredientsFilter.style.top = '20rem';
         this.hiddenAppareilFilter.style.top = '20rem';
         this.hiddenUstensilesFilter.style.top = '20rem';
     }
 
-    // push up the ingredient/appliance/ustensil buttons
+    // poussez vers le haut les boutons ingrédients/appareils/ustensiles
     static pushUpButtonsFilter() {
         this.hiddenIngredientsFilter.style.top = '16.2rem';
         this.hiddenAppareilFilter.style.top = '16.2rem';

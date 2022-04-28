@@ -1,12 +1,12 @@
 'use strict';
 
 export default class Utils {
-    // search starts from 3 characters
+    // la recherche commence à partir de 3 caractères
     static isValid(value) {
         return value.length > 2;
     }
 
-    // transform the text into lowercase
+    // transformer le texte en minuscule
     static normalizeText(text) {
         return text
             .toLowerCase()
@@ -14,7 +14,7 @@ export default class Utils {
             .replace(/[\u0300-\u036f]/g, "");
     }
 
-    // transform the text into uppercase
+    // transformer le texte en majuscule
     static upperText(text) {
         return text
             .charAt(0)
@@ -36,7 +36,7 @@ export default class Utils {
         return elt.innerHTML = '';
     }
 
-    // Collect all the ingredients/appliance/ustensils, and sort them alphabetically
+    // Rassemblez tous les ingrédients/appareils/ustensiles et triez-les par ordre alphabétique
     static sortByTitle(array) {
         let arrayNoSort = [...new Set(array)];
         let arraySort = arrayNoSort.sort((a, b) => {

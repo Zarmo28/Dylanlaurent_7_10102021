@@ -4,10 +4,10 @@ import Messages from './page/Messages.js';
 import Search from './search/Search.js';
 import Utils from './utilities/Utils.js';
 
-// Build by default without search
+// Construire par défaut sans recherche
 Builder.init();
 
-// Build with search Input
+// Construire avec l'entrée de recherche
 document.getElementById('searchBarInput').addEventListener('keyup', (key) => {
     let valueSearch = key.target.value;
     if (Utils.isValid(valueSearch)) {

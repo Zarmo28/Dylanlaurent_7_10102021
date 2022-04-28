@@ -3,21 +3,21 @@
 import Utils from '../utilities/Utils.js';
 
 export default class DomService {
-    // build the section containing the recipes to display
+    // construire la section contenant les recettes à afficher
     static buildResult(collections) {
         return collections.forEach(collection => {
             this.buildRecipe(collection);
         });
     }
 
-    // build each recipe
+    // construire chaque recette
     static buildRecipe(collection) {
         let section = document.getElementById('mainContent');
 
         return section.appendChild(this.createArticleElt(collection));
     }
 
-    // create the article which will contain the information of each recipe
+    // créer l'article qui contiendra les informations de chaque recette
     static createArticleElt(collection) {
         let article = document.createElement('article');
         let dataFilterIngredients = collection.ingredients.map(element => Utils.normalizeText(element.ingredient));

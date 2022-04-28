@@ -9,26 +9,26 @@ import Ustensils from '../filters/Ustensils.js';
 
 export default class Builder {
     static init() {
-        // Build Section with all Recipes before Search
+        // Construire une section avec toutes les recettes avant la recherche
         DomService.buildResult(recipesApiResult);
         Messages.hideMessage();
-        // Ingredients logic
+        // Logique des ingrédients
         Ingredients.init(DataLogic.getAllIngredients(recipesApiResult), recipesApiResult);
-        // Appliances logic
+        // Logique des appareils
         Appliances.init(DataLogic.getAllAppliances(recipesApiResult), recipesApiResult);
-        // Ustensils logic
+        // Logique des ustensiles
         Ustensils.init(DataLogic.getAllUstensils(recipesApiResult), recipesApiResult);
     }
 
     static initSearch(result) {
-        // Build Section after Search
+        // Créer une section après la recherche
         DomService.buildResult(result.recipesMatched);
         Messages.buildResultMessageWithResult(result.recipesMatched);
-        // Ingredients logic
+        // Logique des ingrédients
         Ingredients.init(result.ingredients, result.recipesMatched);
-        // Appliances logic
+        // Logique des appareils
         Appliances.init(result.appliances, result.recipesMatched);
-        // Ustensils logic
+        // Logique des ustensiles
         Ustensils.init(result.ustensils, result.recipesMatched);
     }
 }
